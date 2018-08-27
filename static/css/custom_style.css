@@ -1,0 +1,29 @@
+
+.pull-right{
+	float: right !important;
+}
+
+.footer {
+	background: #293034 !important;
+      height: 60px;
+	  border-top: 1px solid #3D474C;
+	  color: #69767F;
+	  font-family: 'Open Sans', sans-serif;
+}
+
+.footer a { font-size: 11px; color: #69767F;}
+.footer .container {padding-top: 10px;}
+.footer .nav > li > a:hover,
+.footer .nav > li > a:focus {
+	  background-color: #374246;
+	  text-decoration: none;
+}
+.footer .copyright { font-size: 11px; color: #69767F; padding-top: 10px;}
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 768px){
+	.col-sm-4.col-lg-4.col-md-4.top20.img-gallery{
+		width: 100% !important;
+	}
+}

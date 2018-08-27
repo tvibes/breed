@@ -1,0 +1,56 @@
+{% extends 'serves/base.html' %}
+
+{% load static %}
+
+{% block login %}
+
+    <div class="main" role="main">
+        <div class="row login-header img-responsive" style="background-image: url('{% static 'accounts/images/background-blank.jpg' %}') ">
+            <div class="container">
+                <div class="row" >
+                    <div class="col-lg-12" >
+                        <div class="row">
+                            <div class="col-md-8 wow fadeInLeft">
+                                <h2 class="tagline">Modern &amp; Inspiring Handmade Crafts</h2><br>
+                                <h4>We Feed You Constantly With Stunning Artisans!</h4>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="account-box wow fadeInRight">
+                                    <div class="signup-window" style="padding-top: 150px;"></div>
+                                    <form class="user-form" action="{% url 'login' %}" method="post">
+                                        {% csrf_token %}
+                                        {{ form.as_p }}
+                                        {% if request.GET.next %}
+                                            <input type="hidden" name="next" value="{{ request.GET.next }}">
+                                        {% endif %}
+                                        <input type="submit" value="Login" class="btn btn-lg btn-block purple-bg">
+                                    </form>
+                                    <a class="forgotLnk" href="#">I can't access my account</a>
+                                    <div class="or-box">
+                                        <span class="or">OR</span>
+                                        <div class="row">
+                                            <div class="col-md-6 row-block">
+                                                <a href="#" class="btn btn-facebook btn-block">Facebook</a>
+                                            </div>
+                                            <div class="col-md-6 row-block">
+                                                <a href="#" class="btn btn-danger btn-block">Google</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="or-box row-block">
+                                        <div class="row">
+                                            <div class="col-md-12 row-block">
+                                                <a href="{% url 'signup' %}" class="btn btn-primary btn-block">Create New Account</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
