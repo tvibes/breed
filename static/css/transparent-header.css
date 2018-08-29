@@ -33,7 +33,7 @@ Tags:        agency, blog, bootstrap, corporate, deco interior, gym fitness, mag
 /* --------------------------------------------------------------------- */
 .logo {
       padding-top: 25px;
-      padding-left: 0;
+      padding-left: 0
 }
 /* logo end */
 /* --------------------------------------------------------------------- */
@@ -162,7 +162,7 @@ header {
 }
 
 .sticky-for-body {
-    margin-top: 0px;
+    margin-top: 0;
 }
 .toolbar_hidden {
     display: none !important;
