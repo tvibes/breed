@@ -83,7 +83,7 @@ Tags:        agency, blog, bootstrap, corporate, deco interior, gym fitness, mag
 .navbar-default .navbar-toggle:focus {
   background-color: #555;
 }
-.container > .navbar-header, .container > .navbar-collapse { margin-left: 0px; margin-right: 0px;} /* For toggle menu alignment */
+.container > .navbar-header, .container > .navbar-collapse { margin-left: 0; margin-right: 0;} /* For toggle menu alignment */
 /* --------------------------------------------------------------------- */
 
 /* for Mega Menu */
@@ -108,7 +108,7 @@ Tags:        agency, blog, bootstrap, corporate, deco interior, gym fitness, mag
     -webkit-border-radius: none; 
     -moz-border-radius: none; 
     border-radius: none; 
-	padding-left: 0px !important;
+	padding-left: 0 !important;
 	border-bottom: 1px solid #e1e1e1;
 }
 .nav-sidebar .active a { 

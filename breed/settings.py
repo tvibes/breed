@@ -24,9 +24,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '=v$!wc)t5nz610g-&t%y3krl*+yjju_ta_zy(e(!!!q5#5d)nm'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['artisanisland.herokuapp.com', '.artisanisland.com']
+ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1', 'artisanisland.herokuapp.com', '.artisanisland.com']
 
 
 # Application definition
@@ -46,6 +46,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -129,7 +130,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'live-static', 'static-root')
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
@@ -137,4 +138,4 @@ STATICFILES_DIRS = [
 
 MEDIA_URL = '/media/'
 
-MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR,), "breed/media")
+MEDIA_ROOT = os.path.join(BASE_DIR, 'live-static', 'media-root')
