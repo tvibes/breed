@@ -24,9 +24,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '=v$!wc)t5nz610g-&t%y3krl*+yjju_ta_zy(e(!!!q5#5d)nm'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'artisanisland.herokuapp.com', '.artisanisland.com']
+ALLOWED_HOSTS = ['artisanisland.herokuapp.com', '.artisanisland.com']
 
 
 # Application definition
