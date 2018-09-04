@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d513dbed-012c-4d80-bafd-2a71fd98ee4c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/newbreed/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/breed/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/breed/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/breed/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/breed/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/newbreed/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/newbreed/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/newbreed/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/newbreed/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/newbreed/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/newbreed/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/newbreed/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/newbreed/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-    </list>
+    <list default="true" id="d513dbed-012c-4d80-bafd-2a71fd98ee4c" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,11 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/breed/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1411">
-              <caret line="84" column="16" selection-start-line="84" selection-start-column="16" selection-end-line="84" selection-end-column="16" />
+            <state relative-caret-position="289">
+              <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
               <folding>
                 <element signature="e#304#313#0" expanded="true" />
               </folding>
@@ -87,11 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="657">
-              <caret line="40" column="88" lean-forward="true" selection-start-line="40" selection-start-column="88" selection-end-line="40" selection-end-column="88" />
+            <state relative-caret-position="-966">
+              <caret line="24" column="72" lean-forward="true" selection-start-line="24" selection-start-column="72" selection-end-line="24" selection-end-column="72" />
             </state>
           </provider>
         </entry>
@@ -167,7 +156,6 @@
         <option value="$PROJECT_DIR$/templates/home.html" />
         <option value="$PROJECT_DIR$/static/css/transparent-header.css" />
         <option value="$PROJECT_DIR$/static/css/navbar-transparent.css" />
-        <option value="$PROJECT_DIR$/breed/settings.py" />
         <option value="$PROJECT_DIR$/breed/urls.py" />
         <option value="$PROJECT_DIR$/newbreed/urls.py" />
         <option value="$PROJECT_DIR$/newbreed/views.py" />
@@ -175,6 +163,7 @@
         <option value="$PROJECT_DIR$/newbreed/admin.py" />
         <option value="$PROJECT_DIR$/newbreed/models.py" />
         <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/breed/settings.py" />
       </list>
     </option>
   </component>
@@ -306,7 +295,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="709" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="12" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
@@ -314,8 +302,8 @@
       <window_info anchor="bottom" id="Version Control" order="1" />
       <window_info anchor="bottom" id="Python Console" order="5" />
       <window_info anchor="bottom" id="Run" order="8" weight="0.32843137" />
-      <window_info anchor="bottom" id="Terminal" order="4" weight="0.32843137" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.1898223" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="4" visible="true" weight="0.32843137" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.1898223" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" weight="0.32956383" />
       <window_info anchor="right" id="Google Cloud Storage" order="0" weight="0.32956383" />
@@ -605,16 +593,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/breed/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1411">
-          <caret line="84" column="16" selection-start-line="84" selection-start-column="16" selection-end-line="84" selection-end-column="16" />
-          <folding>
-            <element signature="e#304#313#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/newbreed/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -661,8 +639,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="657">
-          <caret line="40" column="88" lean-forward="true" selection-start-line="40" selection-start-column="88" selection-end-line="40" selection-end-column="88" />
+        <state relative-caret-position="-966">
+          <caret line="24" column="72" lean-forward="true" selection-start-line="24" selection-start-column="72" selection-end-line="24" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/breed/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+          <folding>
+            <element signature="e#304#313#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
