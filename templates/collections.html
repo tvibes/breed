@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block collections %}
+    <div class="container  " style="padding-top: 150px; padding-bottom: 60px">
+        {% for num in nums %}
+
+        {% endfor %}
+        <div class="row ">
+            {% for artisan in artisans %}
+                {% if artisan.image %}
+                    <div class="col-sm-4 col-lg-4 col-md-4 top20 img-gallery">
+                        <a href="{% url 'detail' slug=artisan.slug %}"><img src="{{ artisan.image.url }}" class="img-gallery img-responsive "></a>
+                        <div class="  thumbnail" style="border-radius: 0 !important; max-width: 338px !important;">
+                            <div class="caption">
+                                <p class="description">{{ artisan.description }}</p>
+                                <div class="ratings">
+                                    <p class="pull-right"><span class="label label-warning"> Rated {{ artisan.rating }} </span></p>
+                                    <p>
+                                        <a href="#"><span class="glyphicon glyphicon-star"></span></a>
+                                        <a href="#"><span class="glyphicon glyphicon-star"></span></a>
+                                        <a href="#"><span class="glyphicon glyphicon-star"></span></a>
+                                        <a href="#"><span class="glyphicon glyphicon-star"></span></a>
+                                        <a href="#"><span class="glyphicon glyphicon-star"></span></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
