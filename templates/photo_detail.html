@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block photo_detail %}
+    <div class="container" style="padding-top: 150px; padding-bottom: 60px">
+         <div class="artisan-detail">
+             <div class="artisan">
+                 <h4 style="text-transform: capitalize;">{{ artisan.title }}</h4>
+                 <section><img src="{{ artisan.image.url }}"></section>
+                 <p style="color: #695B59 !important;">{{ artisan.detail }}</p>
+             </div>
+         </div>
+    </div>
+
+{% endblock %}

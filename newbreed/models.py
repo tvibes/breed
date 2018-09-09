@@ -23,15 +23,29 @@ from .utils import unique_slug_gen
 
 # Create your models here.
 class Artisan(models.Model):
+    MECHANIC = 'MCH'
+    PAINTING = 'PTG'
+    CARPENTRY = 'CTY'
+    TILING = 'TLG'
+
+    CAT_CHOICES = (
+        (MECHANIC, 'MECHANIC'),
+        (PAINTING, 'PAINTING'),
+        (CARPENTRY, 'CARPENTRY'),
+        (TILING, 'TILING'),
+    )
+
     user = models.ForeignKey(settings.AUTH_USER_MODEL, default=1, on_delete=models.CASCADE)
     title = models.CharField(max_length=160)
+    category = models.CharField(choices=CAT_CHOICES, default='MECHANIC', max_length=20, )
     image = models.ImageField(null=False, blank=False, default=1)
     width = models.IntegerField(default=338)
     height = models.IntegerField(default=254)
-    slug = models.SlugField(default='page-slug', blank=True)
+    slug = models.SlugField(default='page-slug', blank=True, unique=True)
     description = models.CharField(max_length=60, null=False, blank=False, default=5)
-    detail = models.CharField(null=False, blank=False, max_length=2500, default=5)
-    timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)
+    detail = models.TextField(null=False, blank=False, max_length=2500, default=5)
+    is_favourite = models.BooleanField(default=False)
+    timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
 
     def __str__(self):
         return self.title
@@ -39,7 +53,7 @@ class Artisan(models.Model):
     def get_absolute_url(self):
         return reverse('detail', kwargs={"slug": self.slug})
 
-    class Meta:
+    class META:
         ordering = ['-timestamp']
 
 

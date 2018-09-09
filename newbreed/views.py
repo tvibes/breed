@@ -1,5 +1,6 @@
-from django.shortcuts import render
 from django.conf import settings
+
+from django.db.models import Q
 
 from django.views import generic
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
@@ -21,7 +22,16 @@ def home(request):
 
 
 def collections(request):
-    queryset = Artisan.objects.all()
+    queryset = Artisan.objects.all()  # .order_by('-timestamp')
+
+    query = request.GET.get("q")
+
+    if query:
+        queryset = queryset.filter(
+            Q(title__icontains=query) |
+            Q(description__icontains=query) |
+            Q(category__icontains=query)
+        ).distinct()  # Disallowed duplicate items
 
     context = {
 
@@ -30,3 +40,15 @@ def collections(request):
     }
 
     return render(request, 'collections.html', context)
+
+
+def photo_detail(request, slug):
+    artisan = get_object_or_404(Artisan, slug=slug)
+
+    return render(request, 'photo_detail.html', {'artisan': artisan})
+
+
+
+
+
+

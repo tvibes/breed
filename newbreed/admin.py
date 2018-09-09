@@ -4,7 +4,7 @@ from .models import Artisan
 
 class ArtisanAdmin(admin.ModelAdmin):
     display = [
-        ('Description', {'fields': ['title', 'image', 'description', 'timestamp', 'category', 'detail', 'rating']}),
+        ('Description', {'fields': ['title', 'image', 'description', 'detail']}),
     ]
 
     class Meta:

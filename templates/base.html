@@ -38,6 +38,7 @@
         <link href="{% static 'css/responsive.css' %}" rel="stylesheet" type="text/css">
         <link href="{% static 'css/animated.min.css' %}" rel="stylesheet" type="text/css">
         <link href="{% static 'css/megamenu.css' %}" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/custom_style.css' %}" media="screen">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
         <link href="{% static 'css/bootstrap-theme.min.css' %}" rel="stylesheet" media="screen">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
@@ -96,15 +97,22 @@
         <div class="row header-main">
             <div class="container">
                 <!-- Navbar Start -->
-                <nav class="navbar navbar-default navbar-fixed-top megamenu" style="background: none !important; padding-left: 50px; padding-right: 50px; border-bottom: none !important;">
+                <nav class="navbar navbar-default navbar-fixed-top megamenu" style="background: #000000 !important; padding-left: 50px; padding-right: 50px; border-bottom: none !important;">
                     <div class="navbar-header">
-                        <button type="button" data-toggle="collapse" data-target="#navbar-collapse-2" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="{% url 'home' %}" class="navbar-brand"><img src="{% static 'images/logo/logo.jpg' %}" class="img-responsive" alt="Logo"></a>
+                        <button type="button" data-toggle="collapse" data-target="#navbar-collapse-2" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="brand-logo"  href="{% url 'home' %}">Artisan Island</a>
                     </div>
+                    <form class="navbar-form navbar-left" role="search" action="#" method="get">
+                        <div class="form-group">
+                            <input type="text" class="form-control search-box" name="q" placeholder=" Search artisans" value="{{ request.GET.q }}">
+                            <button type="submit" class="btn btn-default glyphicon glyphicon-search search-btn" style="background: #000000"></button>
+                        </div>
+
+                    </form>
                     <div id="navbar-collapse-2" class="navbar-collapse collapse pull-right">
                         <ul class="nav navbar-nav">
 
                             <!-- MegaMenu Start -->
-                            <li class="active"><a href="{% url 'home' %}" >Home</a>
+                            <li class=""><a href="{% url 'home' %}" >Home</a>
                             </li>
 
                             <!-- MegaMenu End -->
@@ -114,18 +122,20 @@
                             <!-- Exhibitions Menu Ends -->
 
                             <!-- Portfolio Menu Start -->
-                            <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a>
+                            <li class="dropdown"> <a href="#" class="dropdown-toggle portfolio-menu" data-toggle="dropdown">Portfolio<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="">Fullwidth Media Gallery</a></li>
+                                    <li><a href="">MECHANIC</a></li>
+                                     <li><a href="">CARPENTRY</a></li>
+                                     <li><a href="">PAINTING</a></li>
+                                     <li><a href="">TILING</a></li>
                                 </ul>
                             </li>
                             <!-- Portfolio Menu End -->
 
                             <!-- Blog Menu Start -->
-                            <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="">Showcase</a></li>
-                                </ul>
+                             <li class="add-artisan"> <a href="#" >Add Artisan</a>
+                            </li>
+                            <li class="login-btn"> <a href="#" >Login</a>
                             </li>
                             <!-- Blog Menu End -->
                         </ul>

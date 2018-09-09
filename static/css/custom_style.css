@@ -1,6 +1,41 @@
-
+.brand-logo{
+	font-size: 3em;
+	position: relative;
+	bottom: -38px;
+	color: #c0c0c0;
+}
 .pull-right{
 	float: right !important;
+}
+
+.navbar-form.navbar-left{
+	position: relative;
+	bottom: -27px;
+}
+
+input.form-control.search-box{
+	width: 300px;
+	background-color: #000000;
+	height: 33px;
+	box-shadow: none;
+	border-style: none;
+}
+
+.search-btn{
+	height: 33px;
+	position: absolute;
+	margin-left: 0;
+}
+
+.glyphicon.glyphicon-search{
+	color: #7b7c7e;
+	border-style: none;
+	box-shadow: none;
+
+}
+
+.no-artisans{
+	text-transform: none;
 }
 
 .footer {
