@@ -42,8 +42,8 @@ class Artisan(models.Model):
     width = models.IntegerField(default=338)
     height = models.IntegerField(default=254)
     slug = models.SlugField(default='page-slug', blank=True, unique=True)
-    description = models.CharField(max_length=60, null=False, blank=False, default=5)
-    detail = models.TextField(null=False, blank=False, max_length=2500, default=5)
+    description = models.CharField(max_length=60, null=False, blank=False)
+    detail = models.TextField(null=False, blank=False, max_length=2500)
     is_favourite = models.BooleanField(default=False)
     timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
 

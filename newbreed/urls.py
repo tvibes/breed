@@ -5,6 +5,7 @@ from . import views
 urlpatterns = [
     url(r'^$', views.home, name='home'),
     url(r'^collections/$', views.collections, name='collections'),
+    url(r'^artisan/add/$', views.ArtisanCreate.as_view(), name='add-artisan'),
     url(r'^(?P<slug>[\w-]+)/$', views.photo_detail, name='detail'),
 ]
 

@@ -133,7 +133,7 @@
                             <!-- Portfolio Menu End -->
 
                             <!-- Blog Menu Start -->
-                             <li class="add-artisan"> <a href="#" >Add Artisan</a>
+                             <li class="add-artisan"> <a href="{% url 'add-artisan' %}" >Add Artisan</a>
                             </li>
                             <li class="login-btn"> <a href="#" >Login</a>
                             </li>
@@ -154,6 +154,11 @@
     {% endblock %}
 
     {% block collections %}
+
+    {% endblock %}
+
+    {% block add-artisan %}
+
 
     {% endblock %}
 

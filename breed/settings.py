@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '=v$!wc)t5nz610g-&t%y3krl*+yjju_ta_zy(e(!!!q5#5d)nm'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['artisanisland.herokuapp.com', '.artisanisland.com']
 
@@ -140,3 +140,6 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'live-static', 'media-root')
+
+#  URL_REDIRECT
+login_url = '/login/'

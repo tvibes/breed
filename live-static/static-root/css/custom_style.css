@@ -1,8 +1,19 @@
 .brand-logo{
-	font-size: 3em;
+	font-size: 2.3em;
 	position: relative;
 	bottom: -38px;
-	color: #c0c0c0;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+#add-artisan{
+	padding-top: 110px;
+	padding-left: 30px;
+}
+
+.brand-logo:hover{
+	color: #FFFFFF;
 }
 .pull-right{
 	float: right !important;

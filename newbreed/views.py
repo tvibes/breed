@@ -1,5 +1,5 @@
 from django.conf import settings
-
+from  django.utils.decorators import method_decorator
 from django.db.models import Q
 
 from django.views import generic
@@ -21,6 +21,7 @@ def home(request):
     return render(request, 'home.html')
 
 
+# Collections view
 def collections(request):
     queryset = Artisan.objects.all()  # .order_by('-timestamp')
 
@@ -46,6 +47,17 @@ def photo_detail(request, slug):
     artisan = get_object_or_404(Artisan, slug=slug)
 
     return render(request, 'photo_detail.html', {'artisan': artisan})
+
+
+class ArtisanCreate(CreateView):
+    model = Artisan
+    fields = [
+        'title',
+        'category',
+        'image',
+        'description',
+        'detail'
+    ]
 
 
 
