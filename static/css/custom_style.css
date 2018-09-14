@@ -14,6 +14,7 @@
 
 .brand-logo:hover{
 	color: #FFFFFF;
+
 }
 .pull-right{
 	float: right !important;
@@ -71,5 +72,9 @@ input.form-control.search-box{
 @media screen and (max-width: 768px){
 	.col-sm-4.col-lg-4.col-md-4.top20.img-gallery{
 		width: 100% !important;
+	}
+
+	.brand-logo{
+		width: auto;
 	}
 }
