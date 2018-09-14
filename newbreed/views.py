@@ -1,4 +1,5 @@
 from django.conf import settings
+from django.contrib.auth.mixins import LoginRequiredMixin
 from  django.utils.decorators import method_decorator
 from django.db.models import Q
 
@@ -49,7 +50,7 @@ def photo_detail(request, slug):
     return render(request, 'photo_detail.html', {'artisan': artisan})
 
 
-class ArtisanCreate(CreateView):
+class ArtisanCreate(LoginRequiredMixin, CreateView):
     model = Artisan
     fields = [
         'title',
@@ -58,6 +59,8 @@ class ArtisanCreate(CreateView):
         'description',
         'detail'
     ]
+
+    login_url = '/login/'
 
 
 
