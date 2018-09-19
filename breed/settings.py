@@ -11,7 +11,10 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
-import dj_database_url
+from decouple import config
+from google.oauth2 import service_account
+# from storages.backends.gcloud import GoogleCloudStorage
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -21,12 +24,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '=v$!wc)t5nz610g-&t%y3krl*+yjju_ta_zy(e(!!!q5#5d)nm'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['newartisanisland.herokuapp.com', '.artisanisland.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'breed-216612.appspot.com', '.artisanisland.com']
 
 
 # Application definition
@@ -46,7 +49,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -83,14 +85,18 @@ WSGI_APPLICATION = 'breed.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'HOST': config('DB_HOST'),
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
+        'PORT': config('DB_PORT'),
     }
 }
 
-db_from_env = dj_database_url.config()
-DATABASES['default'].update(db_from_env)
-DATABASES['default']['CONN_MAX_AGE'] = 500
+# db_from_env = dj_database_url.config()
+# DATABASES['default'].update(db_from_env)
+# DATABASES['default']['CONN_MAX_AGE'] = 500
 
 
 # Password validation
@@ -129,7 +135,21 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATIC_URL = '/static/'
+DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
+
+STATICFILES_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
+
+GS_KEY_ID = config('GS_KEY_ID')
+
+GS_CREDENTIALS = service_account.Credentials.from_service_account_file(
+    "/Users/macintosh/Documents/keys/breed-216612-3500a9ac5cd1.json"
+)
+
+GS_BUCKET_NAME = config('GS_BUCKET_NAME')
+
+PROJECT_ID = config('GC_PROJECT_ID')
+
+STATIC_URL = 'https://console.cloud.google.com/storage/{}/'.format(GS_BUCKET_NAME)
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'live-static', 'static-root')
 
