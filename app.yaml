@@ -9,22 +9,14 @@ runtime_config:
 
 
 env_variables:
-  SECRET_KEY = config('SECRET_KEY')
+  SECRET_KEY: config('SECRET_KEY')
 
-  DEBUG = False
+  DEBUG: 'False'
 
-  HOST = config('DB_HOST')
-  NAME = config('DB_NAME')
-  USER = config('DB_USER')
-  PASSWORD = config('DB_PASSWORD')
-  PORT = config('DB_PORT')
+  HOST: config('DB_HOST')
+  NAME: config('DB_NAME')
+  USER: config('DB_USER')
+  PASSWORD: config('DB_PASSWORD')
+  PORT: '5432'
 
-  STATIC_URL = 'https://console.cloud.google.com/storage/{}/'.format(GS_BUCKET_NAME)
-
-  handlers:
-  - url: /static
-  static_dir: static
-
-  GS_KEY_ID=b1eced6b8544250694b7efff9612749d3c14ddfe
-  GS_BUCKET_NAME=breed-216612
-  GC_PROJECT_ID=breed-216612
+  STATIC_URL: 'https://console.cloud.google.com/storage/{}/'.format(GS_BUCKET_NAME)
