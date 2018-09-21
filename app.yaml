@@ -7,11 +7,15 @@ runtime_config:
 
 
 env_variables:
-  SECRET_KEY: '=v$!wc)t5nz610g-&t%y3krl*+yjju_ta_zy(e(!!!q5#5d)nm'
+  SECRET_KEY=lv$!wc)t5nz610g-&t%y3krl*+yjju_ta_zy(e(!!!q5#5d)nm#97&h=w
 
+  DB_HOST=localhost
+  DB_NAME=artisanisland-db
+  DB_USER=postgres
+  DB_PASSWORD=hublot@1729
+  DB_PORT=5432
 
-  DB_HOST: 'breed-216612:us-central1:artisanisland-db'
-  DB_PORT: '5432'
-  DB_NAME: 'artisanisland-db'
-  DB_USER: 'postgres'
-  DB_PASSWORD: 'hublot@1729'
+  GOOGLE_APP_CREDENTIALS=/Users/macintosh/Downloads/breed-b1eced6b8544.json
+  GS_KEY_ID=b1eced6b8544250694b7efff9612749d3c14ddfe
+  GS_BUCKET_NAME=breed-216612
+  GC_PROJECT_ID=breed-216612
