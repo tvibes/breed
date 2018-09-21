@@ -7,7 +7,7 @@ runtime_config:
 
 
 env_variables:
-  SECRET_KEY: 'lv$!wc)t5nz610g-&t%y3krl*+yjju_ta_zy(e(!!!q5#5d)nm#97&h=w
+  SECRET_KEY: 'lv$!wc)t5nz610g-&t%y3krl*+yjju_ta_zy(e(!!!q5#5d)nm#97&h=w'
 
   DEBUG: 'False'
 
