@@ -141,9 +141,9 @@ STATICFILES_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
 
 GS_KEY_ID = config('GS_KEY_ID')
 
-'''GS_CREDENTIALS = service_account.Credentials.from_service_account_file(
+GS_CREDENTIALS = service_account.Credentials.from_service_account_file(
     "/Users/macintosh/Documents/keys/breed-216612-3500a9ac5cd1.json"
-)'''
+)
 
 GS_BUCKET_NAME = config('GS_BUCKET_NAME')
 
